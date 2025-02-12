@@ -1,0 +1,176 @@
+list_of_item_1=1 #u can adjust as per your requirement of dish
+dish_1 = []
+for item in range(list_of_item_1):
+    item=input("enter dish 1: ")
+    dish_1.append(item)
+print("dish1:",dish_1)
+
+q_for_user=input("Do you Want to add more [Yes/N0]: ")
+yes="yes"
+enough="enough"
+no="no"
+
+while q_for_user == yes:
+    add = input("Add more dish,if done adding press 'enough': ")
+    if add != enough:  
+        dish_1.append(add) 
+    else:
+        q_for_user = no  
+print("Dish1 added:",dish_1) 
+
+price_of_dish=[]
+for each_price in dish_1:
+    each_price = int(input("enter price for each dish: "))
+    price_of_dish.append(each_price)
+print(price_of_dish)
+
+print("---------------------------------------")
+for i in range(len(dish_1)):
+    print(dish_1[i],"=",price_of_dish[i],"/-")
+print("---------------------------------------")
+
+#-----------------------------------------------------------------------------------------
+list_of_item_2=1 #u can adjust as per your requirement of dish
+dish_2 = []
+for item in range(list_of_item_2):
+    item=input("enter dish 2: ")
+    dish_2.append(item)
+print("dish2:",dish_2)
+
+q_for_user=input("Do you Want to add more [Yes/N0]: ")
+yes="yes"
+enough="enough"
+no="no"
+
+while q_for_user == yes:
+    add = input("Add more dish,if done adding press 'enough': ")
+    if add != enough:  
+        dish_2.append(add) 
+    else:
+        q_for_user = no  
+print("Dish2 added:",dish_2) 
+
+price_of_dish=[]
+for each_price in dish_2:
+    each_price = int(input("enter price for each dish: "))
+    price_of_dish.append(each_price)
+print(price_of_dish)
+
+print("---------------------------------------")
+for i in range(len(dish_2)):
+    print(dish_2[i],"=",price_of_dish[i],"/-")
+print("---------------------------------------")
+#--------------------------------------------------------------------------------------
+list_of_item_3=1 #u can adjust as per your requirement of dish
+dish_3 = []
+for item in range(list_of_item_3):
+    item=input("enter dish 3: ")
+    dish_3.append(item)
+print("dish3:",dish_3)
+
+q_for_user=input("Do you Want to add more [Yes/N0]: ")
+yes="yes"
+enough="enough"
+no="no"
+
+while q_for_user == yes:
+    add = input("Add more dish,if done adding press 'enough': ")
+    if add != enough:  
+        dish_3.append(add) 
+    else:
+        q_for_user = no  
+print("Dish3 added:",dish_3) 
+
+price_of_dish=[]
+for each_price in dish_3:
+    each_price = int(input("enter price for each dish: "))
+    price_of_dish.append(each_price)
+print(price_of_dish)
+
+print("---------------------------------------")
+for i in range(len(dish_3)):
+    print(dish_3[i],"=",price_of_dish[i],"/-")
+print("---------------------------------------")
+#-------------------------------------------------------------------------------------
+list_of_item_4=1 #u can adjust as per your requirement of dish
+dish_4 = []
+for item in range(list_of_item_4):
+    item=input("enter dish 4: ")
+    dish_4.append(item)
+print("dish4:",dish_4)
+
+q_for_user=input("Do you Want to add more [Yes/N0]: ")
+yes="yes"
+enough="enough"
+no="no"
+
+while q_for_user == yes:
+    add = input("Add more dish,if done adding press 'enough': ")
+    if add != enough:  
+        dish_4.append(add) 
+    else:
+        q_for_user = no  
+print("Dish4 added:",dish_4) 
+
+price_of_dish=[]
+for each_price in dish_4:
+    each_price = int(input("enter price for each dish: "))
+    price_of_dish.append(each_price)
+print(price_of_dish)
+
+print("---------------------------------------")
+for i in range(len(dish_4)):
+    print(dish_4[i],"=",price_of_dish[i],"/-")
+print("---------------------------------------")
+
+##################################### 4 dishes end here #######################
+note = "Do You Want to add GST [yes/no]"
+print(note)
+
+print("****************************************")
+
+userchoice = input("enter your choice if u want to add gst or not :: yes/no ")
+deveshs_choice1="no"
+deveshs_choice2="yes"
+
+if userchoice == deveshs_choice1:
+    total_dishes=int(input("Again enter total dishes u buyed:"))
+    
+    amount=[]
+    for i in range(total_dishes):
+        i=int(input("Again enter total amount of those each dish: "))
+        amount.append(i)
+    print(amount)
+    print("---------------------------------------")
+
+    total= 0
+    for i in amount:
+        total=total+i
+    print("Total=",total,"/-")
+    print("----------THANKS-FOR-BUYING------------")
+    print("---------------------------------------")
+    
+elif userchoice == deveshs_choice2:
+    total_dishes=int(input("Again enter total dishes u buyed_: "))
+    
+    amount=[]
+    for i in range(total_dishes):
+        i=int(input("Again enter total amount of those each dish_: "))
+        amount.append(i)
+    print(amount)
+    print("----------------------------------------")
+
+    total= 0
+    for i in amount:
+        total=total+i
+    print("Total=",total,"/-")
+    enter_gst_18perc = int(input("Enter GST 18%"))
+    
+    gst_amount = total*(enter_gst_18perc/100)
+    final_total = round(total + gst_amount)
+    print("----------------------------------------")
+    print("final_total=",final_total,"/-")
+    print("----------THANKS-FOR-BUYING-------------") 
+    print("----------------------------------------")
+else: 
+    print("improper decision u took of yes/no ,be clear with yes/no ")
