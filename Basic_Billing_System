@@ -1,0 +1,72 @@
+#BASIC BILLING SYSTEM 
+
+sol = int(input("enter a fix size of list u want: "))
+
+dishes = []
+for item in range(sol):
+    item = input("enter dishes")
+    dishes.append(item)
+print(dishes)
+
+price_of_dish=[]
+for each_price in dishes:
+    each_price = int(input("enter price for each dish: "))
+    price_of_dish.append(each_price)
+print(price_of_dish,)
+
+print("---------------------------------------")
+for i in range(len(dishes)):
+    print(dishes[i],"=",price_of_dish[i],"/-")
+print("---------------------------------------")
+
+note = "Do You Want to add GST [yes/no]"
+print(note)
+
+print("****************************************")
+
+userchoice = input("enter your choice if u want to add gst or not :: yes/no ")
+deveshs_choice1="no"
+deveshs_choice2="yes"
+
+if userchoice == deveshs_choice1:
+    total_dishes=int(input("Again enter total dishes u buyed:"))
+    
+    amount=[]
+    for i in range(total_dishes):
+        i=int(input("Again enter total amount of those each dish: "))
+        amount.append(i)
+    print(amount)
+    print("---------------------------------------")
+
+    total= 0
+    for i in amount:
+        total=total+i
+    print("Total=",total,"/-")
+    print("----------THANKS-FOR-BUYING------------")
+    print("----------------------------------------")
+    
+elif userchoice == deveshs_choice2:
+    total_dishes=int(input("Again enter total dishes u buyed_: "))
+    
+    amount=[]
+    for i in range(total_dishes):
+        i=int(input("Again enter total amount of those each dish_: "))
+        amount.append(i)
+    print(amount)
+    print("----------------------------------------")
+
+    total= 0
+    for i in amount:
+        total=total+i
+    print("Total=",total,"/-")
+    enter_gst_18perc = int(input("Enter GST 18%"))
+    
+    gst_amount = total*(enter_gst_18perc/100)
+    final_total = round(total + gst_amount)
+    
+    print("----------------------------------------")
+    print("final_total=",final_total,"/-")
+    print("----------THANKS-FOR-BUYING-------------") 
+    print("----------------------------------------")
+else: 
+    print("improper decision u took of yes/no ,be clear with yes/no ")
