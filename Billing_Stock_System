@@ -1,0 +1,80 @@
+#question Billing Stock System
+
+--- input Section ---
+Enter SKU ( Unique Number ) : 101
+Enter Product Name : Books
+Enter Product QT : 20
+Enter Single Book Price : 120/-
+
+Do you Want Add more [Y/N]
+Y
+Enter SKU ( Unique Number ) : 102
+Enter Product Name : toy
+Enter Product QT : 5
+Enter Single Book Price : 560/-
+
+Do you Want Add more [Y/N]
+Y
+Enter SKU ( Unique Number ) : 103
+Enter Product Name : Samosa
+Enter Product QT : 250
+Enter Single Book Price : 20/-
+
+Do you Want Add more [Y/N]
+N
+--- Output Section---------
+------  Search Item ------
+Enter Product Item Form SKU No. 103
+Total Cost : 5000/-
+Product Name : Samosa
+QT : 250 
+Single Price : 20/-
+
+------------------------------------------------------------------------------------------------------
+products=[]
+def information_products():
+    SKU_Unique_Number = int(input("Enter SKU ( Unique Number ): "))
+    Product_Name = input("Enter Product Name:  ")
+    Product_QT = int(input("Enter Product QT: "))
+    Single_Book_Price = int(input("Enter Price: "))
+    product={
+        "prod_sku" : SKU_Unique_Number,
+    "prod_name" : Product_Name,
+    "prod_qty"  : Product_QT,
+    "prod_price" : Single_Book_Price,                
+    }
+    products.append(product)
+    print(type(products))
+    print("product list",products)
+    return product
+
+returned_product=information_products()
+products.append(returned_product)
+    
+n="no"
+y="yes"
+user=input("Do you Want Add more [Yes/No]: ")
+if user!="yes" and  user!="no":
+    print("invalid selection")
+    user=input("Do you Want Add more [Yes/No]: ")
+if user=="yes":
+    while not user == "quit":
+        product =information_products()
+        products.append(product)
+        user=input("you Want then Add more by pressing enter? {press quit to print invoice}: ")
+    print("------------------search Item----------------------")
+    def search_item(products,prod_sku):
+        for product in products:
+            if int(product["prod_sku"]) == int(prod_sku):
+                total_cost = product["prod_qty"]*product["prod_price"]
+                return product["prod_name"],product["prod_qty"],product["prod_price"],total_cost
+        return "this kind of product u didnt mentioned"        
+        
+    prod_sku_search=int(input("enter sku number to searche the product: "))
+    result=search_item(products,prod_sku_search)
+    print("your product",result)
+    
+elif user=="no":
+    print("no products added")
+else:
+    print("Invalid Selection")
