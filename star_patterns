@@ -1,0 +1,70 @@
+#Understanding the Star Patter Using For loop
+
+def star_pattern1():
+    for i in range(1,6):
+        for j in range(i):
+            print("*", end=" ")
+        print()
+
+star_pattern1()
+
+print("-----------------------------------------")
+
+def star_pattern2():
+    for i in range(1,6):
+        for j in range(6-i):
+            print("*", end=" ")
+        print()
+
+star_pattern2()
+
+print("-----------------------------------------")
+
+def star_pattern3():
+    for i in range(1,6):
+        for j in range(1,6):
+            print("*", end=" ")
+        print()
+
+star_pattern3()
+
+print("-----------------------------------------")
+
+def star_pattern4():
+    for i in range(1,6):
+        for j in range(i):
+            print(" ", end=" ")
+        for k in range(6-i):
+            print("*", end=" ")
+        print()
+
+star_pattern4()
+
+print("-----------------------------------------")
+
+def star_pattern5():
+    for i in range(1,6):
+        for j in range(6-i):
+            print(" ",end=" ")
+        for k in range(i):
+            print("*",end=" ")
+        print()
+
+star_pattern5()
+
+print("-----------------------------------------")
+
+def star_pattern5():
+    for i in range(1, 5):
+        print(" " * (4 - i) + "*" * (2 * i - 1))
+
+star_pattern5()
+
+print("-----------------------------------------")
+
+def star_pattern6():
+    for i in range(4, 0, -1):
+        print(" " * (4 - i) + "*" * (2 * i - 1))
+
+star_pattern6()
+
